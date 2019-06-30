@@ -474,7 +474,8 @@ Asciidoctor-Maven-Webbase / pom.xml
 		    <artifactId>maven-war-plugin</artifactId>
 		    <version>2.6</version>
 		    <configuration>
-		       <failOnMissingWebXml>false</failOnMissingWebXml>
+		       <!--<failOnMissingWebXml>false</failOnMissingWebXml> -->
+			<webXml>WebContent\WEB-INF\web.xml</webXml>
 		    </configuration>
 		</plugin>
                 </plugins>
