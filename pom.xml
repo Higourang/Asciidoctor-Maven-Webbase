@@ -475,6 +475,7 @@
 		        <!--<failOnMissingWebXml>false</failOnMissingWebXml> -->
 			<webXml>src\main\webapp\WEB-INF\web.xml</webXml> 
     		   <!--	<webXml>WebContent/WEB-INF/web.xml</webXml> -->
+			 <webXml>${project.basedir}\src\main\webapp\WEB-INF\web.xml</webXml>
 			<webappDirectory>/sample/servlet/container/deploy/directory</webappDirectory>
 		    </configuration>
 		</plugin> 		  		
