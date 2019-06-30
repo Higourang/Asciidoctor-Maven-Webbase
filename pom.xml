@@ -364,7 +364,6 @@
         <profile>
             <!--
               To release to bintray, add your credentials to ~/.m2/settings.xml and run:
-
                $ mvn deploy
             -->
             <id>release-profile</id>
@@ -466,6 +465,15 @@
                             </execution>
                         </executions>
                     </plugin>
+                    <!--  Adding maven-war-plugin plugin, and set the failOnMissingWebXml option to false. -->
+                    <plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-war-plugin</artifactId>
+							<version>2.6</version>
+							<configuration>
+								<failOnMissingWebXml>false</failOnMissingWebXml>
+							</configuration>
+					</plugin>
                 </plugins>
             </build>
         </profile>
