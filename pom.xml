@@ -466,14 +466,15 @@
                             </execution>
                         </executions>
                     </plugin>
-	<!--  Adding maven-war-plugin plugin, and set the failOnMissingWebXml option to false. -->
+	 <!--  Adding maven-war-plugin plugin, and set the failOnMissingWebXml option to false. -->
 		 <plugin>
 		    <groupId>org.apache.maven.plugins</groupId>
 		    <artifactId>maven-war-plugin</artifactId>
 		    <version>3.2.3</version>
 		    <configuration>
-		        <failOnMissingWebXml>false</failOnMissingWebXml> 
-    			<webXml>WebContent/WEB-INF/web.xml</webXml>
+		        <!--<failOnMissingWebXml>false</failOnMissingWebXml> -->
+			<webXml>src\main\webapp\WEB-INF\web.xml</webXml> 
+    		   <!--	<webXml>WebContent/WEB-INF/web.xml</webXml> -->
 			<webappDirectory>/sample/servlet/container/deploy/directory</webappDirectory>
 		    </configuration>
 		</plugin> 		  		
