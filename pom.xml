@@ -1,3 +1,5 @@
+Asciidoctor-Maven-Webbase / pom.xml
+***********************************
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -364,6 +366,7 @@
         <profile>
             <!--
               To release to bintray, add your credentials to ~/.m2/settings.xml and run:
+
                $ mvn deploy
             -->
             <id>release-profile</id>
@@ -465,15 +468,15 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <!--  Adding maven-war-plugin plugin, and set the failOnMissingWebXml option to false. -->
-                    <plugin>
-							<groupId>org.apache.maven.plugins</groupId>
-							<artifactId>maven-war-plugin</artifactId>
-							<version>2.6</version>
-							<configuration>
-								<failOnMissingWebXml>false</failOnMissingWebXml>
-							</configuration>
-					</plugin>
+	<!--  Adding maven-war-plugin plugin, and set the failOnMissingWebXml option to false. -->
+		<plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-war-plugin</artifactId>
+		    <version>2.6</version>
+		    <configuration>
+		       <failOnMissingWebXml>false</failOnMissingWebXml>
+		    </configuration>
+		</plugin>
                 </plugins>
             </build>
         </profile>
